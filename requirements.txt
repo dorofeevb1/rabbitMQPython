@@ -1,1 +1,3 @@
-pika
+aio_pika
+logbook
+pyyaml
