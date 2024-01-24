@@ -1,0 +1,17 @@
+rmq:
+  start_with_api: true
+  prefetch:
+
+  connection:
+    host: dc1-v-d3-rmq-vip.infra.dev.01.vmw.t1.loc
+    port: 5672
+    login: admin
+    password: WyP681CmJq0bj6kSdd0MVUZrU
+
+  test_queue:
+    params:
+      name: test_item_cnv
+      durable: True
+    bind:
+      exchange: state_service
+      routing_key: 'Event.#'
